@@ -8,5 +8,7 @@ pm2 stop ca-simpleapplication
 cd ca-simpleapplication/
 # Install application dependencies
 npm install
+echo $PRIVATE_KEY > privatekey.pem
+echo $SERVER > server.crt
 # Start the application with the process name ca-simpleapplication using pm2
 pm2 start ./bin/www --name ca-simpleapplication
